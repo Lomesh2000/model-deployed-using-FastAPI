@@ -3,7 +3,7 @@ import requests
 
 url = 'http://127.0.0.1:8000/result'
 
-data_for_post_reuest = {
+data_for_post_request = {
     'Pregnancies' : 6,
     'Glucose' : 148,
     'BloodPressure' : 72,
@@ -14,7 +14,7 @@ data_for_post_reuest = {
     'Age' : 50
     }
 
-input_json = json.dumps(data_for_post_reuest)
+input_json = json.dumps(data_for_post_request)
 response = requests.post(url, input_json)
 print(response.text)
 print(response.status_code)
